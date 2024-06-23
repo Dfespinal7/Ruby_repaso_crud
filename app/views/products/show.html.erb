@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Nombre:</h1>
+          <p class="card-text"><%= @product.nombre %></p>
+          <h1 class="card-title">Descripción:</h1>
+          <p class="card-text"><%= @product.descripcion %></p>
+          <h1 class="card-title">Precio:</h1>
+          <p class="card-text">$<%= @product.precio %></p>
+            <%=link_to 'volver',products_path(),class:"btn btn-primary"%>
+            <%=link_to 'Editar este producto',edit_product_path(@product), class:"btn btn-success"%>
+            <%=link_to 'Eliminar producto',product_delete_path(@product),class:"btn btn-danger", data:{
+                turbo_method: :delete
+            }%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

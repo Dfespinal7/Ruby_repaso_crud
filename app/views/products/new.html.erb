@@ -1,0 +1,15 @@
+<h1>nuevo producto</h1>
+<%=form_with model: @product do |form|%>
+<%@product.errors.full_messages.each do |error|%>
+        <%=error%>
+    <%end%>
+    <%=form.label :nombre,class:"form-label"%>
+    <%=form.text_field :nombre,class:"form-control"%>
+    <%=form.label :descripcion,class:"form-label"%>
+    <%=form.text_field :descripcion,class:"form-control"%>
+    <%=form.label :precio,class:"form-label"%>
+    <%=form.text_field :precio,class:"form-control"%>
+    <%= form.submit "Crear Producto", class: "btn btn-primary" %>
+<%end%>
+
+<%=link_to 'volver a listar producto',products_path()%>
