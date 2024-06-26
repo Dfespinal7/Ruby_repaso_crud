@@ -14,7 +14,8 @@
             <%=link_to 'Editar este producto',edit_product_path(@product), class:"btn btn-success"%>
             <%=link_to 'Eliminar producto',product_delete_path(@product),class:"btn btn-danger", data:{
                 turbo_method: :delete,
-                turbo_confirm: '¿Estas seguro?'
+                turbo_confirm: '¿Estas seguro?',
+                turbo_confirm:'¿Estas seguro de eliminar?'
             }%>
         </div>
       </div>
